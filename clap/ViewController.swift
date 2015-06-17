@@ -13,6 +13,13 @@ class ViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSou
     @IBOutlet var clapPickerView: UIPickerView!
     var audioPlayer: AVAudioPlayer!
     var soundCount: Int = 0
+    
+    @IBOutlet weak var resultlabel2 :UIImageView!
+    let ResultPic0: UIImage! = UIImage(named: "homework.jpg")
+    let ResultPic1: UIImage! = UIImage(named: "ipod.png")
+    let ResultPic2: UIImage! = UIImage(named: "stevejobswallpaper-ipad.png")
+    let ResultPic3: UIImage! = UIImage(named: "stevejobs1.png")
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +53,7 @@ class ViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSou
     @IBAction func playButton(){
             audioPlayer.numberOfLoops = soundCount
             audioPlayer.play()
+        resultlabel2.image = ResultPic0
     
     }
 }
